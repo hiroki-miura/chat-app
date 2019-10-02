@@ -9,7 +9,8 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
   },
 
   received: function(message) {
-    alert(message)
+    const messages = document.getElementById('messages')
+    messages.innerHTML += `<p>${message}</p>`
   },
 
   speak: function(content) {
