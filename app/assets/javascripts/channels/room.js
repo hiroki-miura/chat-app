@@ -13,6 +13,6 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
   },
 
   speak: function(content) {
-    return this.perform('speak');
+    return this.perform('speak',{message: "ハロー！"});
   }
 });
